@@ -52,9 +52,9 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			brokerId: 'orderly',
 			brokerName: 'Orderly',
 			appIcons: {
-				main: {
-					img: '/orderly-logo.svg',
-				},
+				// main: {
+				// 	img: '/orderly-logo.svg',
+				// },
 				secondary: {
 					img: '/orderly-logo-secondary.svg',
 				},
