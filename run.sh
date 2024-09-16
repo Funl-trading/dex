@@ -15,6 +15,8 @@ pnpm i @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/ledger @we
 
 pnpm i @orderly.network/react@internal @orderly.network/web3-onboard@internal @orderly.network/core@internal @orderly.network/hooks@internal
 pnpm dev
+#pnpm build
+#pnpm start
 
 #build docket：
 docker build -t orderly-web-demo .
@@ -26,5 +28,9 @@ cd ../orderly-web
 pnpm build
 
 cd ../front-end
-pnpm i 
-pnpm dev
+pnpm i
+#pnpm dev
+#pnpm build
+
+
+pnpm start

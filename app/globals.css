@@ -4,12 +4,12 @@
 
 :root {
 	/* colors */
-  --orderly-color-primary: 182 79 255;
+  --orderly-color-primary: 246, 77, 5;
   --orderly-color-primary-light: 208 140 255;
   --orderly-color-primary-darken: 152 62 214;
   --orderly-color-primary-contrast: 255 255 255;
 
-  --orderly-color-link: 182 79 255;
+  --orderly-color-link: 246, 77, 5;
   --orderly-color-link-light: 208 140 255;
 
   --orderly-color-secondary: 255 255 255;
@@ -87,9 +87,9 @@
   --orderly-shadow-2xl: '0px 12px 20px 0px rgba(0, 0, 0, 0.3)';
 
   --orderly-referral-bg-gradient-from: 73 31 102;
-  --orderly-referral-bg-gradient-to: 182 79 255;
+  --orderly-referral-bg-gradient-to: 246, 77, 5;
   --orderly-referral-text-gradient-from: 73 31 102;
-  --orderly-referral-text-gradient-to: 182 79 255;
+  --orderly-referral-text-gradient-to: 246, 77, 5;
 
 }
 
@@ -137,7 +137,7 @@
   }
   @font-face {
     font-family: 'Manrope';
-    src: url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+    src: url('/fonts/OxygenMono/OxygenMono-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -145,7 +145,7 @@
   
   @font-face {
     font-family: 'Manrope';
-    src: url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
+    src: url('/fonts/OxygenMono/OxygenMono-Regular.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -153,7 +153,7 @@
   
   @font-face {
     font-family: 'Manrope';
-    src: url('/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype');
+    src: url('/fonts/OxygenMono/OxygenMono-Regular.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -161,7 +161,7 @@
   
   @font-face {
     font-family: 'Manrope';
-    src: url('/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
+    src: url('/fonts/OxygenMono/OxygenMono-Regular.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -169,7 +169,7 @@
   
   @font-face {
     font-family: 'Manrope';
-    src: url('/fonts/Manrope/Manrope-ExtraBold.ttf') format('truetype');
+    src: url('/fonts/OxygenMono/OxygenMono-Regular.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;

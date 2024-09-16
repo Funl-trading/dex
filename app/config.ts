@@ -8,8 +8,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 	const wcV2InitOptions = {
 		version: 2,
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
-		requiredChains: [42161],
-		optionalChains: [421613, 42161],
+		requiredChains: [8453],
+		optionalChains: [8453, 84532],
 		dappUrl: window.location.host,
 	};
 
@@ -49,8 +49,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			},
 		},
 		app: {
-			brokerId: 'orderly',
-			brokerName: 'Orderly',
+			brokerId: 'funl_ai',
+			brokerName: 'funl_ai',
 			appIcons: {
 				// main: {
 				// 	img: '/orderly-logo.svg',
@@ -62,9 +62,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			chainFilter: { mainnet: [Arbitrum, Optimism, Base, Ethereum] },
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
-				xUrl: 'https://twitter.com/OrderlyNetwork',
-				// telegramUrl: "https://orderly.network",
-				discordUrl: 'https://discord.com/invite/orderlynetwork',
+				xUrl: 'https://x.com/Funl_ai/',
+				telegramUrl: "https://t.me/c/2143076574/1",
 			},
 			shareOptions: {
 				pnl: {
@@ -87,7 +86,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// "paneProperties.backgroundType": "solid",
 			// "paneProperties.background": "#1D1A26",
 
-			// "mainSeriesProperties.candleStyle.upColor": "#00B59F",
+			"mainSeriesProperties.candleStyle.upColor": "#FF7F00",
 			// "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
 			// "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
