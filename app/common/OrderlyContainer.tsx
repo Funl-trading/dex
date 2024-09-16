@@ -56,34 +56,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
-				// chainFilter={{
-				// 	mainnet: [
-				// 		{
-				// 			id: 5000,
-				// 			chainInfo: {
-				// 			  chainId: `0x${(5000).toString(16)}`,
-				// 			  chainName: "Mantle",
-				// 			  nativeCurrency: {
-				// 				name: "MNT",
-				// 				symbol: "MNT",
-				// 				decimals: 6,
-				// 				fix: 4,
-				// 			  },
-				// 			  rpcUrls: ["https://rpc.mantle.xyz/"],
-				// 			  blockExplorerUrls: ["https://mantlescan.xyz/"],
-				// 			},
-				// 			minGasBalance: 0.0002,
-				// 			minCrossGasBalance: 0.002,
-				// 			maxPrepayCrossGas: 0.03,
-				// 			blockExplorerName: "Mantle",
-				// 			chainName: "Mantle",
-				// 			chainNameShort: "Mantle",
-				// 			requestRpc: "https://rpc.mantle.xyz/",
-				// 			chainLogo: "",
-				// 		  }
-				// 	],
-				// 	testnet: [],
-				// }}
+				
 				topBarProps={{
 					left: (
 						<div className="orderly-h-[48px] orderly-p-3">
@@ -104,17 +77,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 						router.push('/referral/dashboard');
 					},
 				}}
-				theme={undefined}
-				// chainFilter={
-				// 	{
-				// 		mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
-				// 		testnet: [{ id: 421614 }, { id: 421613 }],
-				// 	} as any
-				// }
-				// chainFilter={{
-				// 	mainnet: [],
-				// 	testnet: [{ id: ARBITRUM_TESTNET_CHAINID }, { id: MANTLE_TESTNET_CHAINID }],
-				// }}
+				theme={undefined}			
 			>
 				{props.children}
 			</OrderlyAppProvider>
