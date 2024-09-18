@@ -4,13 +4,13 @@
 
 :root {
 	/* colors */
-  --orderly-color-primary: 246, 77, 5;
-  --orderly-color-primary-light: 208 140 255;
-  --orderly-color-primary-darken: 152 62 214;
+  --orderly-color-primary: 255 153 0;
+  --orderly-color-primary-light: 255 163 26;
+  --orderly-color-primary-darken: 204 122 0;
   --orderly-color-primary-contrast: 255 255 255;
 
-  --orderly-color-link: 246, 77, 5;
-  --orderly-color-link-light: 208 140 255;
+  --orderly-color-link: 255 153 0;
+  --orderly-color-link-light: 255 163 26;
 
   --orderly-color-secondary: 255 255 255;
   --orderly-color-tertiary: 218 218 218;
@@ -87,9 +87,9 @@
   --orderly-shadow-2xl: '0px 12px 20px 0px rgba(0, 0, 0, 0.3)';
 
   --orderly-referral-bg-gradient-from: 73 31 102;
-  --orderly-referral-bg-gradient-to: 246, 77, 5;
+  --orderly-referral-bg-gradient-to: 255, 153, 0;
   --orderly-referral-text-gradient-from: 73 31 102;
-  --orderly-referral-text-gradient-to: 246, 77, 5;
+  --orderly-referral-text-gradient-to: 255, 153, 0;
 
 }
 

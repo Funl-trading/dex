@@ -2,10 +2,10 @@ import dynamic from 'next/dynamic';
 import './globals.css';
 const OrderlyContainer = dynamic(() => import('./common/OrderlyContainer'), { ssr: false });
 
-// export const metadata: Metadata = {
-// 	title: 'Orderly SDK Demo',
-// 	description: 'Orderly SDK Demo222'
-// };
+ export const metadata: Metadata = {
+ 	title: 'FUNL SDK',
+ 	description: 'FUNL SDK'
+ };
 
 export const viewport = {
 	minimumScale: 1.0,
@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					rel="stylesheet"
 				/> */}
 			</head>
-			<title id="orderly_sdk_demo_title_key">Orderly SDK Demo</title>
-			<meta name="description" content="Orderly SDK Demo" />
+			<title id="orderly_sdk_demo_title_key">FUNL AI PERP</title>
+			<meta name="description" content="FUNL AI PERP" />
 			<body>
 				<OrderlyContainer>{children}</OrderlyContainer>
 			</body>

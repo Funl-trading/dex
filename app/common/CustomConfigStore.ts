@@ -55,7 +55,7 @@ export class CustomConfigStore implements ConfigStore {
 			['privateWsUrl', urls['privateWsUrl']],
 			['operatorUrl', urls['operatorUrl']],
 			['networkId', networkId],
-			['swapSupportApiUrl', 'https://fi-api.woo.org'],
+			['swapSupportApiUrl', 'https://funl.ai'],
 		]);
 	}
 	get<T>(key: ConfigKey): T {
@@ -68,8 +68,9 @@ export class CustomConfigStore implements ConfigStore {
 				this.set(Markets_key, {
 					recent: [],
 					favorites: [
-						{ name: 'PERP_ETH_USDC', tabs: [{ ...defaultTab }] },
 						{ name: 'PERP_BTC_USDC', tabs: [{ ...defaultTab }] },
+						{ name: 'PERP_ETH_USDC', tabs: [{ ...defaultTab }] },
+						
 					],
 					favoriteTabs: [{ ...defaultTab }],
 				});
