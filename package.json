@@ -1,6 +1,6 @@
 {
-	"name": "orderly",
-	"version": "0.1.0",
+	"name": "funl",
+	"version": "1.7",
 	"private": true,
 	"scripts": {
 		"dev": "next dev -p 3344",
