@@ -1,6 +1,7 @@
 import { Arbitrum, Base, Ethereum, Optimism } from '@orderly.network/types';
 import injectedModule from '@web3-onboard/injected-wallets';
 import ledgerModule from '@web3-onboard/ledger';
+import coinbaseModule from '@web3-onboard/coinbase';
 // import trezorModule from '@web3-onboard/trezor'
 import walletConnectModule from '@web3-onboard/walletconnect';
 
@@ -16,9 +17,18 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 	const ledgerInitOptions = {
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
 	};
+
+	const coinbaseInitOptions = {
+		appName: 'Orderly',
+		appLogoUrl: 'https://orderly.network/images/orderly-logo.svg',
+		darkMode: true,
+		chains: [1, 10, 42161],
+	};
+
 	const walletConnect = walletConnectModule(wcV2InitOptions);
 	// @ts-ignore
 	const ledger = ledgerModule(ledgerInitOptions);
+	const coinbase = coinbaseModule(coinbaseInitOptions);
 
 	return {
 		onboard: {
@@ -26,6 +36,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				injectedModule(),
 				walletConnect,
 				ledger,
+				coinbase,
 				// trezor,
 			],
 			appMetadata: {
