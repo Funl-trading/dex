@@ -23,6 +23,7 @@
 		"@web3-onboard/injected-wallets": "^2.10.10",
 		"@web3-onboard/ledger": "^2.5.2",
 		"@web3-onboard/trezor": "^2.4.3",
+		"@web3-onboard/coinbase": "^2.1.2",
 		"@web3-onboard/walletconnect": "^2.5.1",
 		"assert": "^2.0.0",
 		"axios": "^1.6.2",
