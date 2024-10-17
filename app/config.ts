@@ -96,8 +96,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// "paneProperties.backgroundType": "solid",
 			// "paneProperties.background": "#1D1A26",
 
-			"mainSeriesProperties.candleStyle.upColor": "#FF7F00",
-			// "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
+			"mainSeriesProperties.candleStyle.upColor": "#4CAF50",
+			"mainSeriesProperties.candleStyle.downColor": "#FF5252",
 			// "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
