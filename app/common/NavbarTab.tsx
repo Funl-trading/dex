@@ -35,11 +35,11 @@ const NavbarTab: React.FC = () => {
 				value: 'portfolio',
 				path: () => '/portfolio'
 			},
-			{
+			/*{
 				title: 'Referral',
 				value: 'referral',
 				path: () => '/referral/dashboard'
-			}
+			}*/
 		],
 		[],
 	);
