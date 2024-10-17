@@ -1,8 +1,7 @@
-import { Arbitrum, Base, Ethereum, Optimism, Mantle } from '@orderly.network/types';
+import { Arbitrum, Base } from '@orderly.network/types';
 import injectedModule from '@web3-onboard/injected-wallets';
 import ledgerModule from '@web3-onboard/ledger';
 import coinbaseModule from '@web3-onboard/coinbase';
-// import trezorModule from '@web3-onboard/trezor'
 import walletConnectModule from '@web3-onboard/walletconnect';
 
 export function OrderlyConfig(ctx?: { url: string; domain: string }) {
@@ -71,7 +70,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				},
 			},
 			chainFilter: { mainnet: [Base, Arbitrum]  },
-			enableSwapDeposit: false,
+			enableSwapDeposit: true,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
 				telegramUrl: "https://t.me/c/2143076574/1",

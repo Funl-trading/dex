@@ -27,7 +27,7 @@ export default function PerpPage({ params }: { params: { slug: string } }) {
 
 	return (
 		<MainView
-			symbol={symbol || 'PERP_ETH_USDC'}
+			symbol={symbol || 'PERP_BTC_USDC'}
 			onSymbolChange={(symbol) => {
 				console.log('update symbol', symbol);
 				localStorage.setItem(_orderlySymbolKey, symbol.symbol);
