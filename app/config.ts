@@ -92,7 +92,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			scriptSRC: '/tradingview/charting_library/charting_library.js',
 			library_path: '/tradingview/charting_library/',
 			customCssUrl: '/tradingview/chart.css',
-			// overrides: {
+			overrides: {
 			// "paneProperties.backgroundType": "solid",
 			// "paneProperties.background": "#1D1A26",
 
@@ -111,7 +111,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// // text color
 			// "scalesProperties.textColor": "#97969B",
 			// "scalesProperties.lineColor": "#2B2833"
-			// },
+			},
 		},
 	};
 }
