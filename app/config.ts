@@ -1,4 +1,4 @@
-import { Arbitrum, Base, Ethereum, Optimism } from '@orderly.network/types';
+import { Arbitrum, Base, Ethereum, Optimism, Mantle } from '@orderly.network/types';
 import injectedModule from '@web3-onboard/injected-wallets';
 import ledgerModule from '@web3-onboard/ledger';
 import coinbaseModule from '@web3-onboard/coinbase';
@@ -70,7 +70,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			chainFilter: { mainnet: [Arbitrum, Optimism, Base, Ethereum] },
+			chainFilter: { mainnet: [Base, Arbitrum]  },
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
