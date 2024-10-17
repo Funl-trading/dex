@@ -57,7 +57,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
 				chainFilter={app.chainFilter}
-				appMetadata={onboard.appMetadata}
+				recommendedInjectedWallets={onboard.appMetadata.recommendedInjectedWallets}
 				topBarProps={{
 					left: (
 						<div className="orderly-h-[48px] orderly-p-3">

@@ -11,34 +11,31 @@ const View = (props: Props) => {
 	const { tradingViewConfig } = OrderlyConfig();
 
 	useEffect(() => {
+		// Verificar se a URL atual é 'agents.funl.ai'
+		const isAgentsFunl = window.location.hostname === 'agents.funl.ai';
+
 		const observer = new MutationObserver(() => {
-			
 			const confirmButton = document.querySelector('#orderly-order-entry-confirm-button');
+			
+			if (isAgentsFunl && confirmButton && confirmButton instanceof HTMLButtonElement && confirmButton.style.display !== 'none') {
+				confirmButton.style.display = 'none';  // Esconder botão
+			}
 
-			if (confirmButton && confirmButton instanceof HTMLButtonElement && confirmButton.style.display !== 'none') {
-
-				//confirmButton.remove();
-
-				const divForm = document.querySelector('#orderly-order-entry-form');
-				if (divForm) {
-					divForm.remove();					
-				}
-			}	
+			const divForm = document.querySelector('#orderly-order-entry-form');
+			if (isAgentsFunl && divForm instanceof HTMLElement) {
+				divForm.style.display = 'none';  // Esconder formulário
+			}
 			
 			const warningElement = document.querySelector('#orderly-chain-id-switch');
 			if (warningElement) {
 				warningElement.remove();
 			}
-
-			
 		});
-	  
+
 		observer.observe(document.body, { childList: true, subtree: true });
-	  
-		return () => observer.disconnect();  
-	  }, []);
-	  
-	  
+
+		return () => observer.disconnect();
+	}, []);
 
 	return (
 		<TradingPage
