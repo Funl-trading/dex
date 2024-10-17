@@ -10,7 +10,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		version: 2,
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
 		requiredChains: [8453],
-		optionalChains: [8453, 84532],
+		optionalChains: [8453, 42161],
 		dappUrl: window.location.host,
 	};
 
@@ -20,9 +20,9 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 
 	const coinbaseInitOptions = {
 		appName: 'Orderly',
-		appLogoUrl: 'https://orderly.network/images/orderly-logo.svg',
+		appLogoUrl: 'https://perp.funl.ai/orderly-logo.svg',
 		darkMode: true,
-		chains: [1, 10, 42161],
+		chains: [8453, 42161],
 	};
 
 	const walletConnect = walletConnectModule(wcV2InitOptions);
@@ -44,8 +44,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				icon: '/Orderly.svg',
 				description: 'Orderly',
 				recommendedInjectedWallets: [
-					{ name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
 					{ name: 'MetaMask', url: 'https://metamask.io' },
+					{ name: 'Coinbase', url: 'https://wallet.coinbase.com/' },					
 					{ name: 'Trezor', url: 'https://trezor.io/' },
 					{ name: 'Walletconnect', url: 'https://walletconnect.com/' },
 					{ name: 'Ledger', url: 'https://www.ledger.com/' },
