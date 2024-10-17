@@ -69,7 +69,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			chainFilter: { mainnet: [Base, Arbitrum]  },
+			chainFilter: { mainnet: [Base]  },
 			enableSwapDeposit: true,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
