@@ -30,7 +30,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 	const ledger = ledgerModule(ledgerInitOptions);
 	const coinbase = coinbaseModule(coinbaseInitOptions);
 
-	return {		
+	return {
+		
 		onboard: {
 			wallets: [
 				injectedModule(),
@@ -38,15 +39,6 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				ledger,
 				coinbase,
 				// trezor,
-			],
-			chains: [
-				
-				{
-					id: 8453, 
-					token: 'ETH',
-					label: 'Base',
-					rpcUrl: 'https://mainnet.base.org', 
-				}				
 			],
 			appMetadata: {
 				name: 'Funl AI',
@@ -78,6 +70,9 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				secondary: {
 					img: '/orderly-logo-secondary.svg',
 				},
+			},
+			useChain: {
+				networkId: 8453,
 			},
 			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },	
 			enableSwapDeposit: false,
