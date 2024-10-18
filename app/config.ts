@@ -30,9 +30,15 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 	const ledger = ledgerModule(ledgerInitOptions);
 	const coinbase = coinbaseModule(coinbaseInitOptions);
 
-	return {
-		init: {
-			wallets: [injectedModule(), walletConnect, ledger, coinbase],
+	return {		
+		onboard: {
+			wallets: [
+				injectedModule(),
+				walletConnect,
+				ledger,
+				coinbase,
+				// trezor,
+			],
 			chains: [
 				
 				{
@@ -41,15 +47,6 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					label: 'Base',
 					rpcUrl: 'https://mainnet.base.org', 
 				}				
-			]
-		},
-		onboard: {
-			wallets: [
-				injectedModule(),
-				walletConnect,
-				ledger,
-				coinbase,
-				// trezor,
 			],
 			appMetadata: {
 				name: 'Funl AI',
