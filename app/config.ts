@@ -57,12 +57,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					privacyUrl: 'https://www.blocknative.com/privacy-policy',
 				},
 				gettingStartedGuide: 'https://blocknative.com',
-				explore: 'https://blocknative.com',
-				defaultMainnetChains: {
-					chainInfo: {
-						chainId: 8453,
-					}
-				},
+				explore: 'https://blocknative.com',				
 			},
 		},
 		app: {
