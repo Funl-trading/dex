@@ -101,15 +101,15 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
-			// "mainSeriesProperties.candleStyle.wickUpColor": "#00B59F",
-			// "mainSeriesProperties.candleStyle.wickDownColor": "#FF67C2",
+			 "mainSeriesProperties.candleStyle.wickUpColor": "#4CAF50",
+			 "mainSeriesProperties.candleStyle.wickDownColor": "#FF5252",
 
 			// // GRID lines
 			// "paneProperties.vertGridProperties.color": "#26232F",
 			// "paneProperties.horzGridProperties.color": "#26232F",
 
 			// // text color
-			"scalesProperties.textColor": "#4CAF50",
+			//"scalesProperties.textColor": "#4CAF50",
 			// "scalesProperties.lineColor": "#2B2833"
 			},
 		},
