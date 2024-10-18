@@ -9,7 +9,24 @@ import { _orderlySymbolKey } from '../constant';
 import { useRouter } from 'next/navigation';
 import { CustomContractManager } from './CustomContract';
 import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
+import { WalletConnectorContext } from "@orderly.network/hooks";
 export type NetworkId = 'testnet' | 'mainnet';
+
+
+export const WalletConnector = ({ children }: PropsWithChildren) => {
+	return (
+	  <WalletConnectorContext.Provider
+	  	setChain={
+		  {
+			chainId: 8453,
+		  }
+		}
+	  >
+		{children}
+	  </WalletConnectorContext.Provider>
+	);
+  };
+  
 
 const HostEnvMap: Record<string, ENV_NAME> = {
 	'dev-sdk-demo.orderly.network': 'dev',
@@ -44,6 +61,9 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 	const configStore = new CustomConfigStore({ networkId, env });
 	const contracts = new CustomContractManager(configStore);
 
+
+	
+
 	return (
 		<ConnectorProvider options={onboard as any}>
 			<OrderlyAppProvider
@@ -77,9 +97,15 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 						router.push('/referral/dashboard');
 					},
 				}}
-				theme={undefined}			
+				theme={undefined}	
+						
 			>
-				{props.children}
+				  {/* Wrap the children with WalletConnector here */}
+				  <WalletConnector>
+          			{props.children}
+        		</WalletConnector>
+
+				
 			</OrderlyAppProvider>
 		</ConnectorProvider>
 	);
