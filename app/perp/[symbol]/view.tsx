@@ -30,6 +30,12 @@ const View = (props: Props) => {
 				warningElement.remove();
 			}
 
+			// Alterar o `src` da imagem dentro do botão
+			const imgElement = document.querySelector<HTMLImageElement>('#orderly-desktop-botom-bar-switch-chain-button img');
+			if (imgElement) {
+			  imgElement.src = 'https://oss.orderly.network/static/network_logo/8453.png'; // Substitua pelo novo URL da imagem
+			}
+
 			
 		});
 	  

@@ -71,9 +71,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			useChain: {
-				networkId: 8453,
-			},
+			
 			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },	
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
