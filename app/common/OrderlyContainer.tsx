@@ -9,27 +9,7 @@ import { _orderlySymbolKey } from '../constant';
 import { useRouter } from 'next/navigation';
 import { CustomContractManager } from './CustomContract';
 import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
-import { WalletConnectorContext } from "@orderly.network/hooks";
-import { createWeb3Modal, defaultWagmiConfig, useWeb3Modal } from "@web3modal/wagmi/react";
-
 export type NetworkId = 'testnet' | 'mainnet';
-
-const { open } = useWeb3Modal();
-
-export const WalletConnector = ({ children }: PropsWithChildren) => {
-	return (
-	  <WalletConnectorContext.Provider
-	  	setChain={
-		  {
-			chainId: 8453,
-		  }
-		}
-	  >
-		{children}
-	  </WalletConnectorContext.Provider>
-	);
-  };
-  
 
 const HostEnvMap: Record<string, ENV_NAME> = {
 	'dev-sdk-demo.orderly.network': 'dev',
@@ -63,16 +43,12 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 
 	const configStore = new CustomConfigStore({ networkId, env });
 	const contracts = new CustomContractManager(configStore);
-
-	const connect = useCallback(() => {
-		return open().then((res: any) => {
-		  console.log(res);
-		  return [];
-		});
-	}, []);
+	
 
 	return (
 		<ConnectorProvider options={onboard as any}>
+
+			
 			<OrderlyAppProvider
 				configStore={configStore}
 				// contracts={contracts}
@@ -104,15 +80,9 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 						router.push('/referral/dashboard');
 					},
 				}}
-				theme={undefined}	
-						
+				theme={undefined}			
 			>
-				  {/* Wrap the children with WalletConnector here */}
-				  <WalletConnector  value={{ connect }}>
-          			{props.children}
-        		</WalletConnector>
-
-				
+				{props.children}
 			</OrderlyAppProvider>
 		</ConnectorProvider>
 	);
