@@ -10,7 +10,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		version: 2,
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
 		requiredChains: [8453],
-		optionalChains: [8453, 84532],
+		optionalChains: [8453],
 		dappUrl: window.location.host,
 	};
 
@@ -22,7 +22,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		appName: 'Orderly',
 		appLogoUrl: 'https://orderly.network/images/orderly-logo.svg',
 		darkMode: true,
-		chains: [1, 10, 8453, 84532],
+		chains: [8453],
 	};
 
 	const walletConnect = walletConnectModule(wcV2InitOptions);
@@ -40,9 +40,9 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				// trezor,
 			],
 			appMetadata: {
-				name: 'Orderly',
+				name: 'Funl AI',
 				icon: '/Orderly.svg',
-				description: 'Orderly',
+				description: 'Funl AI',
 				recommendedInjectedWallets: [
 					{ name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
 					{ name: 'MetaMask', url: 'https://metamask.io' },
@@ -63,14 +63,15 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			brokerId: 'funl_ai',
 			brokerName: 'funl_ai',
 			appIcons: {
-				// main: {
-				// 	img: '/orderly-logo.svg',
-				// },
+				 main: {
+					img: '/orderly-logo-secondary.svg',
+				 },
 				secondary: {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			chainFilter: { mainnet: [Base], testnet: [] },
+			//chainFilter: { mainnet: [Base], testnet: [] },
+			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
