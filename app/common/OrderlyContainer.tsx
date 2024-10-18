@@ -9,8 +9,6 @@ import { _orderlySymbolKey } from '../constant';
 import { useRouter } from 'next/navigation';
 import { CustomContractManager } from './CustomContract';
 import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
-import { useChains } from "@orderly.network/hooks";
-
 export type NetworkId = 'testnet' | 'mainnet';
 
 const HostEnvMap: Record<string, ENV_NAME> = {
@@ -24,17 +22,11 @@ type OrderlyContainerProps = PropsWithChildren<{
 }>;
 
 const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
-	
 	const networkId = (localStorage.getItem('orderly-networkId') ?? 'mainnet') as NetworkId;
 	const router = useRouter();
 
 	const { onboard, app } = OrderlyConfig();
 
-	const [chains] = useChains(undefined, {
-    	pick: "network_infos",
-  	});	
-
-	
 	const onChainChanged = useCallback(
 		(chainId, isTestnet) => {
 			// console.log('chain changed', chainId, isTestnet);
