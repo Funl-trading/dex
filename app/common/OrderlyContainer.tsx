@@ -10,8 +10,11 @@ import { useRouter } from 'next/navigation';
 import { CustomContractManager } from './CustomContract';
 import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
 import { WalletConnectorContext } from "@orderly.network/hooks";
+import { createWeb3Modal, defaultWagmiConfig, useWeb3Modal } from "@web3modal/wagmi/react";
+
 export type NetworkId = 'testnet' | 'mainnet';
 
+const { open } = useWeb3Modal();
 
 export const WalletConnector = ({ children }: PropsWithChildren) => {
 	return (
@@ -61,8 +64,12 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 	const configStore = new CustomConfigStore({ networkId, env });
 	const contracts = new CustomContractManager(configStore);
 
-
-	
+	const connect = useCallback(() => {
+		return open().then((res: any) => {
+		  console.log(res);
+		  return [];
+		});
+	}, []);
 
 	return (
 		<ConnectorProvider options={onboard as any}>
@@ -101,7 +108,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 						
 			>
 				  {/* Wrap the children with WalletConnector here */}
-				  <WalletConnector>
+				  <WalletConnector  value={{ connect }}>
           			{props.children}
         		</WalletConnector>
 
