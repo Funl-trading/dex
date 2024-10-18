@@ -9,7 +9,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		version: 2,
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
 		requiredChains: [8453],
-		optionalChains: [8453, 42161],
+		optionalChains: [8453],
 		dappUrl: window.location.host,
 	};
 
@@ -21,7 +21,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		appName: 'Orderly',
 		appLogoUrl: 'https://perp.funl.ai/orderly-logo.svg',
 		darkMode: true,
-		chains: [8453, 42161],
+		chains: [8453],
 	};
 
 	const walletConnect = walletConnectModule(wcV2InitOptions);
@@ -70,7 +70,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				},
 			},
 			chainFilter: { mainnet: [Base]  },
-			enableSwapDeposit: true,
+			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
 				telegramUrl: "https://t.me/c/2143076574/1",
@@ -109,7 +109,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// "paneProperties.horzGridProperties.color": "#26232F",
 
 			// // text color
-			// "scalesProperties.textColor": "#97969B",
+			"scalesProperties.textColor": "#4CAF50",
 			// "scalesProperties.lineColor": "#2B2833"
 			},
 		},
