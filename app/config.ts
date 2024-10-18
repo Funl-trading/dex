@@ -64,9 +64,9 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			brokerId: 'funl_ai',
 			brokerName: 'funl_ai',
 			appIcons: {
-				 main: {
+				 /*main: {
 					img: '/orderly-logo-secondary.svg',
-				 },
+				 },*/
 				secondary: {
 					img: '/orderly-logo-secondary.svg',
 				},
