@@ -70,8 +70,12 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			//chainFilter: { mainnet: [Base], testnet: [] },
 			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },
+			defaultMainnetChains: {
+				chainInfo: {
+					chainId: 8453,
+				}
+			},
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
