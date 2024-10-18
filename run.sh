@@ -1,5 +1,5 @@
 # prod
-pnpm i @orderly.network/react @orderly.network/web3-onboard @orderly.network/core
+pnpm i @orderly.network/react @orderly.network/web3-onboard @orderly.network/core @web3-onboard/coinbase
 pnpm dev
 
 pnpm i @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/ledger @web3-onboard/injected-wallets
