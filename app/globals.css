@@ -4,13 +4,13 @@
 
 :root {
 	/* colors */
-  --orderly-color-primary: 255 153 0;
-  --orderly-color-primary-light: 255 163 26;
-  --orderly-color-primary-darken: 204 122 0;
+  --orderly-color-primary: 243 107 44;
+  --orderly-color-primary-light: 243 150 44;
+  --orderly-color-primary-darken: 243 107 44;
   --orderly-color-primary-contrast: 255 255 255;
 
-  --orderly-color-link: 255 153 0;
-  --orderly-color-link-light: 255 163 26;
+  --orderly-color-link: 243 107 44;
+  --orderly-color-link-light: 243 150 44;
 
   --orderly-color-secondary: 255 255 255;
   --orderly-color-tertiary: 218 218 218;
@@ -47,9 +47,9 @@
 
   --orderly-color-base-foreground: 255 255 255;
 
-  --orderly-color-trading-loss: 255 103 194;
+  --orderly-color-trading-loss: 255 82 82;
   --orderly-color-trading-loss-contrast: 255 255 255;
-  --orderly-color-trading-profit: 0 181 159;
+  --orderly-color-trading-profit: 76 175 80;
   --orderly-color-trading-profit-contrast: 255 255 255;
 
   /* rounded */
@@ -76,7 +76,7 @@
 
   --orderly-color-divider: 42 46 52;
 
-  --orderly-font-family: "Manrope", sans-serif;
+  --orderly-font-family: "Oxygen Mono", sans-serif;
 
   --orderly-shadow-sm: '0px 12px 20px 0px rgba(0, 0, 0, 0.3)';
   --orderly-shadow: '0px 12px 20px 0px rgba(0, 0, 0, 0.3)';
@@ -173,4 +173,12 @@
     font-weight: 800;
     font-style: normal;
     font-display: swap;
+  }
+
+  .orderly-text-trade-loss {
+    color: #FF5252;
+  }
+
+  .orderly-text-trade-profit {
+    color: #4CAF50;
   }

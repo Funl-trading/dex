@@ -22,7 +22,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		appName: 'Orderly',
 		appLogoUrl: 'https://orderly.network/images/orderly-logo.svg',
 		darkMode: true,
-		chains: [1, 10, 42161],
+		chains: [1, 10, 8453, 84532],
 	};
 
 	const walletConnect = walletConnectModule(wcV2InitOptions);
@@ -70,7 +70,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			chainFilter: { mainnet: [Arbitrum, Optimism, Base, Ethereum] },
+			chainFilter: { mainnet: [Base] },
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
@@ -97,7 +97,8 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			// "paneProperties.backgroundType": "solid",
 			// "paneProperties.background": "#1D1A26",
 
-			"mainSeriesProperties.candleStyle.upColor": "#FF7F00",
+			"mainSeriesProperties.candleStyle.upColor": "#4CAF50",
+			"mainSeriesProperties.candleStyle.downColor": "#FF5252",
 			// "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
 			// "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
 			// "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
