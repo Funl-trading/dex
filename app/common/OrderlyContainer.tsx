@@ -9,6 +9,8 @@ import { _orderlySymbolKey } from '../constant';
 import { useRouter } from 'next/navigation';
 import { CustomContractManager } from './CustomContract';
 import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
+
+
 export type NetworkId = 'testnet' | 'mainnet';
 
 const HostEnvMap: Record<string, ENV_NAME> = {
@@ -57,6 +59,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
 				chainFilter={app.chainFilter}
+				chainInfo={app.defaultMainnetChains}
 				topBarProps={{
 					left: (
 						<div className="orderly-h-[48px] orderly-p-3">

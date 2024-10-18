@@ -39,6 +39,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				coinbase,
 				// trezor,
 			],
+			
 			appMetadata: {
 				name: 'Funl AI',
 				icon: '/Orderly.svg',
@@ -57,25 +58,25 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				},
 				gettingStartedGuide: 'https://blocknative.com',
 				explore: 'https://blocknative.com',
+				defaultMainnetChains: {
+					chainInfo: {
+						chainId: 8453,
+					}
+				},
 			},
 		},
 		app: {
 			brokerId: 'funl_ai',
 			brokerName: 'funl_ai',
 			appIcons: {
-				 main: {
+				/* main: {
 					img: '/orderly-logo-secondary.svg',
-				 },
+				 },*/
 				secondary: {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
-			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },
-			defaultMainnetChains: {
-				chainInfo: {
-					chainId: 8453,
-				}
-			},
+			chainFilter: { mainnet: [Base, Arbitrum, Optimism, Ethereum], testnet: [] },	
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://x.com/Funl_ai/',
